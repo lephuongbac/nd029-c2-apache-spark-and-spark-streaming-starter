@@ -1,0 +1,74 @@
+ 09:21:02.69 
+ 09:21:02.70 Welcome to the Bitnami spark container
+ 09:21:02.71 Subscribe to project updates by watching https://github.com/bitnami/bitnami-docker-spark
+ 09:21:02.72 Submit issues and feature requests at https://github.com/bitnami/bitnami-docker-spark/issues
+ 09:21:02.73 
+ 09:21:02.75 INFO  ==> ** Starting Spark setup **
+realpath: /bitnami/spark/conf: No such file or directory
+ 09:21:02.81 INFO  ==> Generating Spark configuration file...
+ 09:21:03.01 INFO  ==> ** Spark setup finished! **
+ 09:21:03.05 INFO  ==> ** Starting Spark in worker mode **
+Spark Command: /opt/bitnami/java/bin/java -cp /opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://spark:7077
+========================================
+
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/bitnami/spark/logs/spark--org.apache.spark.deploy.worker.Worker-1-9057250d20ed.out
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/11/17 09:21:04 INFO Worker: Started daemon with process name: 38@9057250d20ed
+22/11/17 09:21:04 INFO SignalUtils: Registering signal handler for TERM
+22/11/17 09:21:04 INFO SignalUtils: Registering signal handler for HUP
+22/11/17 09:21:04 INFO SignalUtils: Registering signal handler for INT
+22/11/17 09:21:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/11/17 09:21:04 INFO SecurityManager: Changing view acls to: spark
+22/11/17 09:21:04 INFO SecurityManager: Changing modify acls to: spark
+22/11/17 09:21:04 INFO SecurityManager: Changing view acls groups to: 
+22/11/17 09:21:04 INFO SecurityManager: Changing modify acls groups to: 
+22/11/17 09:21:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+22/11/17 09:21:04 INFO Utils: Successfully started service 'sparkWorker' on port 38421.
+22/11/17 09:21:04 INFO Worker: Worker decommissioning not enabled.
+22/11/17 09:21:05 INFO Worker: Starting Spark worker 172.23.0.2:38421 with 1 cores, 1024.0 MiB RAM
+22/11/17 09:21:05 INFO Worker: Running Spark version 3.2.1
+22/11/17 09:21:05 INFO Worker: Spark home: /opt/bitnami/spark
+22/11/17 09:21:05 INFO ResourceUtils: ==============================================================
+22/11/17 09:21:05 INFO ResourceUtils: No custom resources configured for spark.worker.
+22/11/17 09:21:05 INFO ResourceUtils: ==============================================================
+22/11/17 09:21:05 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+22/11/17 09:21:05 INFO WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://9057250d20ed:8081
+22/11/17 09:21:05 INFO Worker: Connecting to master spark:7077...
+22/11/17 09:21:06 WARN Worker: Failed to connect to master spark:7077
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:101)
+at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:109)
+at org.apache.spark.deploy.worker.Worker$$anon$1.run(Worker.scala:311)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: Failed to connect to spark/172.23.0.5:7077
+at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:288)
+at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:218)
+at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:230)
+at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+... 4 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark/172.23.0.5:7077
+Caused by: java.net.ConnectException: Connection refused
+at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.lang.Thread.run(Thread.java:750)
+22/11/17 09:21:12 INFO Worker: Retrying connection to master (attempt # 1)
+22/11/17 09:21:12 INFO Worker: Connecting to master spark:7077...
+22/11/17 09:21:12 INFO TransportClientFactory: Successfully created connection to spark/172.23.0.5:7077 after 4 ms (0 ms spent in bootstraps)
+22/11/17 09:21:12 INFO Worker: Successfully registered with master spark://100788d0fbd7:7077

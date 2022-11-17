@@ -1,0 +1,816 @@
+22/11/17 17:04:58 WARN Utils: Your hostname, CPP00044316G resolves to a loopback address: 127.0.1.1; using 172.25.243.236 instead (on interface eth0)
+22/11/17 17:04:58 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/home/andrew/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+22/11/17 17:05:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/11/17 17:05:02 INFO SparkContext: Running Spark version 3.3.1
+22/11/17 17:05:02 INFO ResourceUtils: ==============================================================
+22/11/17 17:05:02 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/11/17 17:05:02 INFO ResourceUtils: ==============================================================
+22/11/17 17:05:02 INFO SparkContext: Submitted application: sparkpyrediskafkastreamtoconsole
+22/11/17 17:05:02 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/11/17 17:05:02 INFO ResourceProfile: Limiting resource is cpu
+22/11/17 17:05:02 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/11/17 17:05:02 INFO SecurityManager: Changing view acls to: andrew
+22/11/17 17:05:02 INFO SecurityManager: Changing modify acls to: andrew
+22/11/17 17:05:02 INFO SecurityManager: Changing view acls groups to: 
+22/11/17 17:05:02 INFO SecurityManager: Changing modify acls groups to: 
+22/11/17 17:05:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(andrew); groups with view permissions: Set(); users  with modify permissions: Set(andrew); groups with modify permissions: Set()
+22/11/17 17:05:03 INFO Utils: Successfully started service 'sparkDriver' on port 40547.
+22/11/17 17:05:03 INFO SparkEnv: Registering MapOutputTracker
+22/11/17 17:05:03 INFO SparkEnv: Registering BlockManagerMaster
+22/11/17 17:05:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/11/17 17:05:03 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/11/17 17:05:03 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/11/17 17:05:03 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0ce6370a-d7b5-445c-b155-e088cb9b7a4c
+22/11/17 17:05:03 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/11/17 17:05:03 INFO SparkEnv: Registering OutputCommitCoordinator
+22/11/17 17:05:03 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar at spark://172.25.243.236:40547/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar at spark://172.25.243.236:40547/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar at spark://172.25.243.236:40547/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://172.25.243.236:40547/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://172.25.243.236:40547/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://172.25.243.236:40547/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar at spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://172.25.243.236:40547/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at spark://172.25.243.236:40547/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar at spark://172.25.243.236:40547/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar at spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added JAR file:///home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://172.25.243.236:40547/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar at file:///home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar at file:///home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar at file:///home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.kafka_kafka-clients-2.8.1.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/com.google.code.findbugs_jsr305-3.0.0.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.commons_commons-pool2-2.11.1.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.spark-project.spark_unused-1.0.0.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar at file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.lz4_lz4-java-1.8.0.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at file:///home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar at file:///home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.slf4j_slf4j-api-1.7.32.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar at file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+22/11/17 17:05:03 INFO SparkContext: Added file file:///home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: Copying /home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/commons-logging_commons-logging-1.1.3.jar
+22/11/17 17:05:03 INFO Executor: Starting executor ID driver on host 172.25.243.236
+22/11/17 17:05:03 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/11/17 17:05:03 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: /home/andrew/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/com.google.code.findbugs_jsr305-3.0.0.jar
+22/11/17 17:05:03 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: /home/andrew/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:03 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1668679502462
+22/11/17 17:05:03 INFO Utils: /home/andrew/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.lz4_lz4-java-1.8.0.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.commons_commons-pool2-2.11.1.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.slf4j_slf4j-api-1.7.32.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.kafka_kafka-clients-2.8.1.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/commons-logging_commons-logging-1.1.3.jar
+22/11/17 17:05:04 INFO Executor: Fetching file:///home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: /home/andrew/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.spark-project.spark_unused-1.0.0.jar
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO TransportClientFactory: Successfully created connection to /172.25.243.236:40547 after 31 ms (0 ms spent in bootstraps)
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16151649332623722785.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16151649332623722785.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.lz4_lz4-java-1.8.0.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.lz4_lz4-java-1.8.0.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp2656767328977209149.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp2656767328977209149.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-api-3.3.2.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp6933743153058458962.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp6933743153058458962.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.spark-project.spark_unused-1.0.0.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.spark-project.spark_unused-1.0.0.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp8480809052550691733.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp8480809052550691733.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.xerial.snappy_snappy-java-1.1.8.4.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp4158671196184901138.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp4158671196184901138.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp917513588023347887.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp917513588023347887.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.1.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16359283951832008602.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16359283951832008602.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/commons-logging_commons-logging-1.1.3.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/commons-logging_commons-logging-1.1.3.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.kafka_kafka-clients-2.8.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16026452671314670723.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp16026452671314670723.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.kafka_kafka-clients-2.8.1.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.kafka_kafka-clients-2.8.1.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.slf4j_slf4j-api-1.7.32.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp6410926925521237255.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp6410926925521237255.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.slf4j_slf4j-api-1.7.32.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.slf4j_slf4j-api-1.7.32.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp11077928917579231290.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp11077928917579231290.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.commons_commons-pool2-2.11.1.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.commons_commons-pool2-2.11.1.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp1414474913801009992.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp1414474913801009992.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.1.jar to class loader
+22/11/17 17:05:04 INFO Executor: Fetching spark://172.25.243.236:40547/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1668679502462
+22/11/17 17:05:04 INFO Utils: Fetching spark://172.25.243.236:40547/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp5927109180702258928.tmp
+22/11/17 17:05:04 INFO Utils: /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/fetchFileTemp5927109180702258928.tmp has been previously copied to /tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/com.google.code.findbugs_jsr305-3.0.0.jar
+22/11/17 17:05:04 INFO Executor: Adding file:/tmp/spark-a4181c95-a36d-42b1-8bb7-7ae76073e8a9/userFiles-e723c8b1-f0b5-4072-81c0-9ec2313a15c1/com.google.code.findbugs_jsr305-3.0.0.jar to class loader
+22/11/17 17:05:04 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37679.
+22/11/17 17:05:04 INFO NettyBlockTransferService: Server created on 172.25.243.236:37679
+22/11/17 17:05:04 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/11/17 17:05:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.25.243.236, 37679, None)
+22/11/17 17:05:04 INFO BlockManagerMasterEndpoint: Registering block manager 172.25.243.236:37679 with 434.4 MiB RAM, BlockManagerId(driver, 172.25.243.236, 37679, None)
+22/11/17 17:05:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.25.243.236, 37679, None)
+22/11/17 17:05:04 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.25.243.236, 37679, None)
+22/11/17 17:05:08 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-59ccf731-d991-4ad9-bef2-c2a495aae187. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+22/11/17 17:05:08 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+---------+
+|               email|birthYear|
++--------------------+---------+
+| Dan.Howard@test.com|     1965|
+|Neeraj.Mitra@test...|     1964|
+|Jason.Lincoln@tes...|     1963|
+|Trevor.Staples@te...|     1962|
+|Sarah.Aristotle@t...|     1961|
+| Jane.Doshi@test.com|     1960|
+|Travis.Jones@test...|     1958|
+|Larry.Phillips@te...|     1957|
+|Spencer.Harris@te...|     1956|
+|Chris.Sanchez@tes...|     1955|
+|Chris.Jones@test.com|     1954|
+|Jacob.Doshi@test.com|     1953|
+|Travis.Lincoln@te...|     1951|
+|Senthil.Jefferson...|     1950|
+|Angie.Clark@test.com|     1949|
+| David.Huey@test.com|     1948|
+|Bobby.Gonzalez@te...|     1947|
+|Trevor.Davis@test...|     1946|
+|Eric.Lincoln@test...|     1945|
+|   Lyn.Huey@test.com|     1943|
++--------------------+---------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 15
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 16
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 17
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 18
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 19
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 20
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 21
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 22
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 23
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 24
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 25
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 26
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 27
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 28
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 29
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 30
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 31
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 32
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 33
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 34
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 35
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 36
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 37
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 38
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 39
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 40
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 41
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 42
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 43
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 44
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 45
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 46
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 47
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 48
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 49
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 50
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 51
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 52
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 53
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 54
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 55
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 56
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 57
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 58
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 59
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 60
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 61
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 62
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 63
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 64
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 65
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 66
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 67
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 68
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 69
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 70
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 71
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 72
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 73
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 74
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 75
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 76
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 77
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 78
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 79
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 80
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
