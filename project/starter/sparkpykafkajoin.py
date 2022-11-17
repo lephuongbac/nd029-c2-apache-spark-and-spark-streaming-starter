@@ -205,7 +205,7 @@ stediScoreStreamingDF.selectExpr(
     .writeStream \
     .format("kafka")\
     .option("kafka.bootstrap.servers", "localhost:9092")\
-    .option("topic", "your-topic-here")\
+    .option("topic", "customer_risk")\
     .option("checkpointLocation", "/tmp/stediScoreCheckpoint")\
     .start()\
     .awaitTermination()
